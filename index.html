@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Mata Mosquito</title>
+    <script>
+        function start(){
+           let nivel = document.querySelector('#nv').value;
+           if (nivel === ''){
+            alert('Selecione um nível para iniciar.')
+            return false;
+           }
+
+           window.location.href = './app.html?' + nivel;
+        }
+    </script>
+</head>
+<body>
+    <div class="game-over">
+        <img src="./assets/imgs/game.png">
+        <div>
+            <select class="nivel" id="nv">
+                <option value="">-- selecionar o nível --</option>
+                <option value="facil">Fácil</option>
+                <option value="normal">Normal</option>
+                <option value="dificil">Difícil</option>
+                <option value="impossivel">Impossível</option>
+            </select>
+        </div>
+        <button class="end-button" onclick="start()">Iniciar</button>
+    </div>
+</body>
+</html>
