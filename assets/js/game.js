@@ -95,13 +95,13 @@ let timer = setInterval(e => {
     }
 }, 1000)
 
-let nivel;
+let level;
 
 switch (window.location.search){
-    case '?facil': nivel = 2000; break;
-    case '?normal': nivel = 1500; break;
-    case '?dificil': nivel = 1000; break;
-    case '?impossivel': nivel = 500; break;
+    case '?facil': level = 2000; break;
+    case '?normal': level = 1500; break;
+    case '?dificil': level = 1000; break;
+    case '?impossivel': level = 500; break;
 }
 
 let life = 3;
@@ -124,4 +124,4 @@ let flyGenerator = setInterval(e => {
     let flySize = flyRandomSize();
     let flySide = flyRandomSide();
     randomPosition(flySize, flySide);
-}, nivel);
+}, level);
