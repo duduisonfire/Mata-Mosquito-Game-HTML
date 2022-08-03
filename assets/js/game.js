@@ -95,7 +95,6 @@ let timer = setInterval(e => {
     }
 }, 1000)
 
-let life = 3;
 let nivel;
 
 switch (window.location.search){
@@ -104,6 +103,8 @@ switch (window.location.search){
     case '?dificil': nivel = 1000; break;
     case '?impossivel': nivel = 500; break;
 }
+
+let life = 3;
 
 let flyGenerator = setInterval(e => {
     let fly = document.querySelector('#fly');
