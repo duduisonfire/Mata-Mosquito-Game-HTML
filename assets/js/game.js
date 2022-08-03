@@ -95,7 +95,7 @@ let timer = setInterval(e => {
     }
 }, 1000)
 
-let i = 3;
+let life = 3;
 let nivel;
 
 switch (window.location.search){
@@ -109,7 +109,7 @@ let flyGenerator = setInterval(e => {
     let fly = document.querySelector('#fly');
     if (fly){
         fly.remove();
-        switch (i){
+        switch (life){
             case 3: document.querySelector('#l3').src = './assets/imgs/coracao_vazio.png'; i--; break;
             case 2: document.querySelector('#l2').src = './assets/imgs/coracao_vazio.png'; i--; break;
             case 1: {
