@@ -61,7 +61,7 @@ function gameOver(){
     document.body.appendChild(endGame);
     let fly = document.querySelector('#fly');
     fly.remove();
-}
+} 
 
 function victory(){
     clearInterval(flyGenerator);
@@ -111,8 +111,8 @@ let flyGenerator = setInterval(e => {
     if (fly){
         fly.remove();
         switch (life){
-            case 3: document.querySelector('#l3').src = './assets/imgs/coracao_vazio.png'; i--; break;
-            case 2: document.querySelector('#l2').src = './assets/imgs/coracao_vazio.png'; i--; break;
+            case 3: document.querySelector('#l3').src = './assets/imgs/coracao_vazio.png'; life--; break;
+            case 2: document.querySelector('#l2').src = './assets/imgs/coracao_vazio.png'; life--; break;
             case 1: {
                 document.querySelector('#l1').src = './assets/imgs/coracao_vazio.png'; 
                 gameOver(); 
